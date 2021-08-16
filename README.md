@@ -12,29 +12,32 @@ How to run the app
 
 Endpoints
 ---------
-1. Sign up 
-POST http://localhost:8080/api/v1/auth/signup
-Content-Type: application/json
+### 1. Sign up <br />
+POST http://localhost:8080/api/v1/auth/signup <br />
+Content-Type: application/json <br />
 
+```json
 {
     "email": "example@xyz.rw",
     "password": "password",
     "confirmPassword": "password"
 }
+```
 
-2. Login
-POST http://localhost:8080/api/v1/auth/authenticate
-Content-Type: application/json
+### 2. Login <br />
+POST http://localhost:8080/api/v1/auth/authenticate <br />
+Content-Type: application/json <br />
 
+```json
 {
     "email": "example@xyz.rw",
     "password": "password"
 }
+```
+### 3. Change subscription <br />
+GET http://localhost:8080/api/v1/auth/subscription/BASIC <br />
+Authorization: Bearer **token** <br />
 
-3. Change subscription
-GET http://localhost:8080/api/v1/auth/subscription/BASIC
-Authorization: Bearer **token**
-
-4. Send messages (to test the rate limiter)
-GET http://localhost:8080/api/v1/messages
-Authorization: Bearer **token**
+### 4. Send messages (to test the rate limiter) <br />
+GET http://localhost:8080/api/v1/messages <br />
+Authorization: Bearer **token** <br />
